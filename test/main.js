@@ -6,6 +6,5 @@ var jquery = require('jquery');
 suite('third party modules');
 
 test('loads jquery from exposed jquery', function() {
-  assert.ok(true, 'the test ran, yay!');
-
+  assert.equal(jquery().jquery, '1.10.2');
 });
