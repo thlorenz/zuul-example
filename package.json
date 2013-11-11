@@ -4,11 +4,7 @@
   "description": "An example of using the zuul test runner to execute your tests locally and remotely including custom server and browserify setup.",
   "main": "index.js",
   "scripts": {
-    "test-main": "tap test/*.js",
-    "test-0.8": "nave use 0.8 npm run test-main",
-    "test-0.10": "nave use 0.10 npm run test-main",
-    "test-all": "npm run test-main && npm run test-0.8 && npm run test-0.10",
-    "test": "if [ -e $TRAVIS ]; then npm run test-all; else npm run test-main; fi"
+    "test": "./run-test"
   },
   "browser": {
     "jquery": "./expose/jquery.js"
@@ -19,13 +15,10 @@
   },
   "homepage": "https://github.com/thlorenz/zuul-example",
   "dependencies": {
-    "render-routes": "~0.1.1",
-    "express": "~3.4.4"
   },
   "devDependencies": {
-    "nave": "~0.4.3",
-    "tape": "~1.0.4",
-    "tap": "~0.4.3",
+    "render-routes": "~0.1.1",
+    "express": "~3.4.4",
     "mocha": "~1.14.0",
     "zuul": "~1.0.2",
     "mocha-phantomjs": "~3.1.6"
