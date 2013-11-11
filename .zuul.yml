@@ -1,0 +1,16 @@
+ui: mocha-qunit
+server: ./test/support/server.js
+scripts:
+  - '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'
+
+# saucelabs
+browsers:
+  - name: chrome
+    version: 28..latest
+  - name: firefox
+    version: 23..latest
+  - name: sarafi
+    version: 6..latest
+  - name: ie
+    version: 10..latest
+
