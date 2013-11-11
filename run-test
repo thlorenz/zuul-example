@@ -1,4 +1,5 @@
 node_modules/.bin/zuul --local 3100 --ui mocha-qunit -- test/*.js &
-# TODO: kill server, but also fail tests when phantomjs comes back with non-zero
 node_modules/.bin/mocha-phantomjs http://localhost:3100/__zuul
+test_result=$?
 kill $!
+exit $test_result
