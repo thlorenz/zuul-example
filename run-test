@@ -1,5 +1,15 @@
+#!/usr/bin/env sh
+
+set -e
+
+function clean() { 
+  echo "taking down zuul test server"
+  kill $! 
+}
+
+trap clean INT TERM ERR
+
 node_modules/.bin/zuul --local 3100 --ui mocha-qunit -- test/*.js &
 node_modules/.bin/mocha-phantomjs http://localhost:3100/__zuul
-test_result=$?
-kill $!
-exit $test_result
+
+clean
