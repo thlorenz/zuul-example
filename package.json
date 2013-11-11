@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./run-test",
-    "test-dev": "zuul --local 3100 --ui mocha-qunit -- test/*.js"
+    "test-dev": "zuul --local 3100 -- test/*.js"
   },
   "browser": {
     "jquery": "./expose/jquery.js"
@@ -20,7 +20,6 @@
   "devDependencies": {
     "render-routes": "~0.1.1",
     "express": "~3.4.4",
-    "mocha": "~1.14.0",
     "zuul": "~1.0.2",
     "mocha-phantomjs": "~3.1.6"
   },
