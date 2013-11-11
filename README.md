@@ -27,6 +27,11 @@ Two steps are needed to allow this:
 2. tell browserify (used by zuul under the hood to bundle your code) that we want to use this expose file whenever
    someone asks for `jquery` via this simple addition to the [browser field in the package.json](https://github.com/thlorenz/zuul-example/blob/5d5f01fe1fcb0d6213266c63b5c8b9842cdd5164/package.json#L10-L12)
 
+## Adding extra routes via custom server
+
+1. we created a [custom server](https://github.com/thlorenz/zuul-example/blob/master/test/support/server.js) which adds [`/routes`](http://localhost:3100/routes).
+2. tell zuul to [initialize this server](https://github.com/thlorenz/zuul-example/blob/master/.zuul.yml#L2)
+
 ## License
 
 MIT
