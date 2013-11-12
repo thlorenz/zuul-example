@@ -4,7 +4,7 @@
   "description": "An example of using the zuul test runner to execute your tests locally and remotely including custom server and browserify setup.",
   "main": "index.js",
   "scripts": {
-    "test": "./run-test",
+    "test": "zuul-mp --local 3100 -- test/*.js",
     "test-dev": "zuul --local 3100 -- test/*.js"
   },
   "browser": {
@@ -15,13 +15,13 @@
     "url": "git://github.com/thlorenz/zuul-example.git"
   },
   "homepage": "https://github.com/thlorenz/zuul-example",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "render-routes": "~0.1.1",
     "express": "~3.4.4",
-    "zuul": "~1.0.2",
-    "mocha-phantomjs": "~3.1.6"
+    "zuul-mp": "~0.1.0",
+    "mocha": "~1.14.0",
+    "zuul": "~1.0.2"
   },
   "keywords": [],
   "author": {
