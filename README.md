@@ -4,6 +4,9 @@ An example of using the zuul test runner to execute your tests locally and remot
 
 ## Automated test script
 
+**NOTE**: In the meantime I created a tool to make the below a lot easier. Please refer to the
+[zuul-mp-branch](https://github.com/thlorenz/zuul-example/tree/zuul-mp) for more information.
+
 The `test` script in the [package.json](https://github.com/thlorenz/zuul-example/blob/master/package.json) together with
 the [run-test](https://github.com/thlorenz/zuul-example/blob/master/run-test) script allows you to run tests
 automatically via `npm test` which works even on travis.ci (see badge).
