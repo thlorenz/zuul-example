@@ -4,9 +4,8 @@ An example of using the zuul test runner to execute your tests locally and remot
 
 ## Automated test script
 
-The `test` script in the [package.json](https://github.com/thlorenz/zuul-example/blob/master/package.json) together with
-the [run-test](https://github.com/thlorenz/zuul-example/blob/master/run-test) script allows you to run tests
-automatically via `npm test` which works even on travis.ci (see badge).
+The `test` script in the [package.json](https://github.com/thlorenz/zuul-example/blob/master/package.json) uses
+[zuul-mp](https://github.com/thlorenz/zuul-mp) to run your tests locally via phantomjs.
 
 The `test-dev` script launches the zuul test server via `npm run test-dev` so you can continuously run your tests in the
 browser while applying changes to your code.
